@@ -1,11 +1,15 @@
 import pytest
-from main import *
+from main import greetings
 
 
-@pytest.mark.parametrize( 'name,expected', [('Никита', 'Привет, Никита'), ('Ольга', 'Привет, Ольга')],)
+@pytest.mark.parametrize(
+    'name,expected',
+    [('Никита', 'Привет, Никита'), ('Ольга', 'Привет, Ольга')],
+)
 def test_greetings(name: str, expected: str):
     """Текст приветствия зависит от имени."""
     assert greetings(name) == expected
+
 
 def test_capitalize():
     """Все слова в имени начинаются с большой буквы."""
