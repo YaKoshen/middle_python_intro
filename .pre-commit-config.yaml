@@ -8,3 +8,5 @@ repos:
         args: ["--config=setup.cfg"]
         language: python
         types: [python]
+    - id: isort
+        name: isort (python)
